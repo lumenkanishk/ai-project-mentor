@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-50 antialiased selection:bg-indigo-500/30;
+  }
+}
+
+/* Custom Scrollbar for dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617; 
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155; 
+}
